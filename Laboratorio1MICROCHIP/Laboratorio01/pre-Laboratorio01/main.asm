@@ -57,6 +57,8 @@ MAIN:
 
 	MOV		R17, R16		//Si no son iguales, guardamos el nuevo valor en R17
 
+//Verificacion de acciones de botones
+
 	SBRS	R16, 0			//Revisar si el bit en registro es 1, es decir, si el botón está presionado o no
 	CALL	INCREMENTO1		//Si el valor es 1, entonces salta la siguiente linea, de ser caso contrario, incrementa PORTD
 
@@ -75,7 +77,8 @@ MAIN:
 	RJMP	MAIN			//Regresar al incio
 
 
-//Sub-rutinas
+
+//Sub-rutinas--------------------------------------------------------------------------
 WAIT:
 	LDI		R18, 0			//Empieza la cuenta en 0
 WAIT1:
